@@ -2,61 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>INTRACE – Trace less, type less.</title>
   <link rel="stylesheet" href="styles.css" />
+  <meta name="color-scheme" content="light only" />
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header class="header">
-    <img src="../assets/intrace-logo.png" alt="INTRACE Logo" class="logo" />
-    <h1>INTRACE</h1>
-    <p class="tagline">Trace less, type less.</p>
+  <header class="nav">
+    <div class="container nav__inner">
+      <div class="brand">
+        <img src="assets/intrace-logo.png" alt="INTRACE Logo" class="logo" />
+        <span class="brand__name">INTRACE</span>
+      </div>
+      <nav class="nav__links">
+        <a href="#demo">Demo</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#how">How it works</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <h2>Automation for Substation Documentation</h2>
-    <p>
-      INTRACE reduces BCU documentation prep time from <strong>6–8 hours</strong> 
-      to under <strong>30 minutes</strong>. With configuration reuse, re-runs 
-      take just <strong>~10 minutes</strong>.
-    </p>
-    <a href="#" class="button">Watch Demo</a> <!-- replace # with demo link -->
-  </section>
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <h1>Trace less, type less.</h1>
+        <p class="lead">
+          Automation for substation documentation. What took <strong>6–8 hours</strong>
+          now takes <strong>~28 minutes</strong> — and re‑runs drop to <strong>~10 minutes</strong>.
+        </p>
+        <div class="cta">
+          <a id="demo" href="#" class="button button--primary">Watch demo</a>
+          <a href="#how" class="button button--ghost">How it works</a>
+        </div>
+      </div>
+    </section>
 
-  <!-- METRICS -->
-  <section class="metrics">
-    <div class="metric">
-      <span class="value">~37 min</span>
-      <span class="label">Cold Start</span>
-    </div>
-    <div class="metric">
-      <span class="value">~10 min</span>
-      <span class="label">Re-run</span>
-    </div>
-    <div class="metric">
-      <span class="value">90–98%</span>
-      <span class="label">Time Reduction</span>
-    </div>
-  </section>
+    <section id="metrics" class="cards">
+      <div class="container cards__grid">
+        <div class="card">
+          <div class="card__value">~37 min</div>
+          <div class="card__label">Cold start</div>
+        </div>
+        <div class="card">
+          <div class="card__value">~10 min</div>
+          <div class="card__label">Re‑run</div>
+        </div>
+        <div class="card">
+          <div class="card__value">90–98%</div>
+          <div class="card__label">Time reduction</div>
+        </div>
+      </div>
+    </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-    <ol>
-      <li>Layout detection & tagging</li>
-      <li>Preprocessing & OCR</li>
-      <li>DI assignment & validation</li>
-      <li>Export for QA review</li>
-    </ol>
-  </section>
+    <section id="how" class="how">
+      <div class="container how__inner">
+        <h2>How it works</h2>
+        <ol>
+          <li>Layout detection & tagging</li>
+          <li>Preprocessing & OCR</li>
+          <li>DI assignment & validation</li>
+          <li>Export for QA review</li>
+        </ol>
+      </div>
+    </section>
+  </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>Built at Alfanar – Summer 2025</p>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>Built at Alfanar – Summer 2025</span>
+      <span>INTRACE v1.0</span>
+    </div>
   </footer>
-
 </body>
 </html>
