@@ -21,266 +21,337 @@
   <header class="site-header" data-aos="fade-down">
     <div class="container header__inner">
       <a href="#" class="header__logo">
-        <img src="assets/intrace-logo.svg" alt="INTRACE logo" />
+        <img src="assets/intrace.svg" alt="INTRACE logo" />
       </a>
       <nav class="header__nav">
-  <a href="#download">Download</a>
-  <a href="#metrics">Performance</a>
-  <a href="#how">How It Works</a>
-  <a href="#who">Who It’s For</a>
-</nav>
-
+        <a href="#download">Download</a>
+        <a href="#metrics">Performance</a>
+        <a href="#how">How It Works</a>
+        <a href="#who">Who It’s For</a>
+      </nav>
     </div>
   </header>
 
-   <!-- HERO -->
-    <section class="hero" data-aos="fade-up">
-     <div class="container hero__inner">
-    <!-- Left: copy -->
-    <div>
-      <h1>Trace less. Type less.</h1>
+  <!-- HERO -->
+  <section class="hero" data-aos="fade-up">
+    <div class="container hero__inner">
+      <!-- Left: copy -->
+      <div>
+        <h1>Trace Less. Type Less.</h1>
+        <p class="lead">
+          INTRACE automates the repetitive parts of substation documentation. Calibration and final QA remain human.
+          First-time projects typically complete in <strong>30–90 minutes</strong> depending on layout variability and scan quality.
+          Reuse is faster.
+        </p>
+        <div class="cta">
+          <a href="#download" class="button button--ghost">Download</a>
+        </div>
+      </div>
+
+      <!-- Right: media (image or short muted loop) -->
+      <div class="hero__media" data-aos="fade-left" data-aos-delay="100">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+          <source src="assets/intrace_video.mp4" type="video/mp4">
+          <source src="assets/intrace_video.webm" type="video/webm">
+          <!-- Fallback text -->
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT DOES — AND DOESN’T -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">What it does - and doesn’t</h2>
+      <div class="kv__grid">
+        <div class="kv">
+          <h3>Does</h3>
+          <p>Automates page/layout tagging, region cropping, OCR with rule checks, deterministic grouping, and export with anomaly flags and a changelog.</p>
+        </div>
+        <div class="kv">
+          <h3>Doesn’t</h3>
+          <p>Remove calibration or human review. New vendors/layouts and poor scans still need setup and spot checks.</p>
+        </div>
+        <div class="kv">
+          <h3>Typical matching</h3>
+          <p>~95–100% per run (varies by vendor, layout variance, and scan quality). Worst-case datasets land around ~90% before review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS MATTERS -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Why This Matters</h2>
       <p class="lead">
-        Built for engineers. INTRACE automates the entire substation documentation workflow.
-        Reducing a full-day task to <strong>28 minutes</strong>, and even less with reuse.
-        Precision. Speed. Zero redundancy.
+        Manual documentation from drawings is slow, inconsistent, and hard to audit. INTRACE reduces hands-on time, standardizes outputs, and preserves an audit trail so engineers focus on design, not transcription.
       </p>
-      <div class="cta">
-        <a id="demo" href="#" class="button button--primary">Watch Video</a>
-        <a href="#how" class="button button--ghost">Download</a>
-        
+      <div class="kv__grid">
+        <div class="kv">
+          <h3>The old way</h3>
+          <p>Manual tracing and data entry for 6–16 hours per unit; variable quality.</p>
+        </div>
+        <div class="kv">
+          <h3>The INTRACE way</h3>
+          <p>30–90 minutes for first-time projects; substantially faster with reuse.</p>
+        </div>
+        <div class="kv">
+          <h3>Impact</h3>
+          <p>90–98% time reduction, predictable scaling, and flagged anomalies for quick review.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Right: media (image or short muted loop) -->
-  <div class="hero__media" data-aos="fade-left" data-aos-delay="100">
-  <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
-    <source src="assets/intrace_demo_nosound.mp4" type="video/mp4">
-    <source src="assets/intrace_demo_nosound.mp4" type="video/webm">
-    <!-- Fallback text -->
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-  </div>
-</section>
-
-<section class="section" data-aos="fade-up">
-  <div class="container">
-    <h2 class="section-title">Why This Matters</h2>
-    <p class="lead">
-      Preparing Bay Control Unit (BCU) documentation has traditionally consumed an entire working day per instance. It is a manual, error-prone process that slows engineering workflows and delays project delivery.
-    </p>
-    <div class="kv__grid">
-      <div class="kv">
-        <h3>The old way</h3>
-        <p>Manual tracing and data entry for 6 – 8 hours per BCU with high variability.</p>
-      </div>
-      <div class="kv">
-        <h3>The INTRACE way</h3>
-        <p>Full-pipeline automation from PDF to verified output in under 28 minutes.</p>
-      </div>
-      <div class="kv">
-        <h3>Why it matters</h3>
-        <p>95% – 97% time savings, predictable scaling, and deterministic accuracy across projects.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+  <!-- PERFORMANCE -->
   <section id="metrics" class="metrics" data-aos="fade-up">
     <div class="container">
-        <h2>Performance</h2>
-    <div class="metrics__grid">
-      <div class="metric__card">
-        <div class="metric__stat">
-          <div class="metric__value">37</div><div class="metric__unit">min</div>
+      <h2>Performance</h2>
+      <div class="metrics__grid">
+        <div class="metric__card">
+          <div class="metric__stat">
+            <div class="metric__value">30 – 90</div><div class="metric__unit">min</div>
+          </div>
+          <div class="metric__desc">First-time projects (layout variability & scan quality drive range).</div>
+          <div class="metric__foot">Measured on standard hardware; single-machine runs.</div>
         </div>
-        <div class="metric__desc">Cold start (no prior project data).</div>
-        <div class="metric__foot">Measured on EHV batch from Hitachi (2090 DIs), single-machine run.</div>
-      </div>
 
-      <div class="metric__card">
-        <div class="metric__stat">
-          <div class="metric__value">10</div><div class="metric__unit">min</div>
+        <div class="metric__card">
+          <div class="metric__stat">
+            <div class="metric__value">10 – 30</div><div class="metric__unit">min</div>
+          </div>
+          <div class="metric__desc">With reuse (same/similar vendor layouts).</div>
+          <div class="metric__foot">Cached calibration & assignments; layout reuse enabled.</div>
         </div>
-        <div class="metric__desc">Re-run with cached calibration & assignments.</div>
-        <div class="metric__foot">Identical vendor, new batch; layout reuse enabled.</div>
-      </div>
 
-      <div class="metric__card">
-        <div class="metric__stat">
-          <div class="metric__value">90 – 98%</div>
+        <div class="metric__card">
+          <div class="metric__stat">
+            <div class="metric__value">90 – 98%</div>
+          </div>
+          <div class="metric__desc">Time reduction vs. manual spreadsheet workflows.</div>
+          <div class="metric__foot">Range reflects OCR quality and layout variance.</div>
         </div>
-        <div class="metric__desc">Time reduction vs. manual spreadsheet workflows.</div>
-        <div class="metric__foot">Range reflects OCR quality and layout variance.</div>
-      </div>
 
-      <div class="metric__card">
-        <div class="metric__stat">
-          <div class="metric__value">0.75</div><div class="metric__unit">FTE</div>
+        <div class="metric__card">
+          <div class="metric__stat">
+            <div class="metric__value">0.75</div><div class="metric__unit">FTE</div>
+          </div>
+          <div class="metric__desc">Engineering capacity freed per active project.</div>
+          <div class="metric__foot">Conservative estimate assuming 1–2 projects/month.</div>
         </div>
-        <div class="metric__desc">Engineering capacity freed per active project.</div>
-        <div class="metric__foot">Conservative estimate assuming 1 – 2 projects/month.</div>
       </div>
+      <p class="muted" style="margin-top:12px;">
+        Accuracy and match rates use a conservative binomial confidence interval.
+      </p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="how" class="how" data-aos="fade-up">
-  <div class="container">
-    <h2>How it works</h2>
-
-    <div class="how__grid">
-      <div class="step">
-        <div class="step__head">
-          <div class="step__num">1</div>
-          <div class="step__title">Layout detection & tagging</div>
+  <!-- COMPOUNDING GAINS (LAYOUT LIBRARY) -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Compounding gains</h2>
+      <p class="lead">
+        Each run expands your layout library. As it grows, new projects increasingly match existing layouts. Cutting calibration and runtime.
+      </p>
+      <div class="kv__grid">
+        <div class="kv">
+          <h3>What’s reused</h3>
+          <p>Page assignment, crop geometry, grouping rules, and validation patterns.</p>
         </div>
-        <div class="step__body">
-          Assign pages to vendor-specific layout IDs. Supports batch tagging and residue rules.
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step__head">
-          <div class="step__num">2</div>
-          <div class="step__title">Preprocessing & OCR</div>
-        </div>
-        <div class="step__body">
-          Normalize contrast, crop DI regions, and OCR both numbers and descriptions with validation.
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step__head">
-          <div class="step__num">3</div>
-          <div class="step__title">DI assignment & validation</div>
-        </div>
-        <div class="step__body">
-          Deterministic grouping (C–N, TU), partial-group handling, and consistency checks.
-        </div>
-
-      </div>
-
-      <div class="step">
-        <div class="step__head">
-          <div class="step__num">4</div>
-          <div class="step__title">Export for QA review</div>
-        </div>
-        <div class="step__body">
-          Consolidate to Excel with flags for anomalies and a changelog for audits.
+        <div class="kv">
+          <h3>Result</h3>
+          <p>Faster starts, fewer manual steps, and more predictable output quality over time.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" data-aos="fade-up">
-  <div class="container">
-    <h2>Capabilities</h2>
-    <div class="kv__grid">
-      <div class="kv">
-        <h3>Vendor-agnostic</h3>
-        <p>Pluggable layout configs. Works across Hitachi, Hyundai, Siemens, and custom schemas.</p>
-      </div>
-      <div class="kv">
-        <h3>Deterministic pipeline<span class="badge">No black box</span></h3>
-        <p>Rule-first engine with explicit validation—predictable, debuggable outputs.</p>
-      </div>
-      <div class="kv">
-        <h3>Human-in-the-loop</h3>
-        <p>Fast correction passes with audit trail; engineer always has final say.</p>
-      </div>
-      <div class="kv">
-        <h3>Reuse aware</h3>
-        <p>Caches calibration and assignments for repeat vendors and similar layouts.</p>
-      </div>
-      <div class="kv">
-        <h3>Deployment</h3>
-        <p>Single-machine, offline-capable; minimal dependencies. Windows & macOS.</p>
-      </div>
-      <div class="kv">
-        <h3>Exports</h3>
-        <p>Excel/CSV plus JSON sidecars for CI ingestion and downstream automation.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- HOW IT WORKS -->
+  <section id="how" class="how" data-aos="fade-up">
+    <div class="container">
+      <h2>How it works</h2>
 
-<section id="who" class="section" data-aos="fade-up">
-  <div class="container">
-    <h2 class="section-title">Who’s It For</h2>
-    <div class="kv__grid">
-      <div class="kv">
-        <h3>Design Engineers</h3>
-        <p>Accelerate documentation tasks and focus on system design, not repetitive data handling.</p>
-      </div>
-      <div class="kv">
-        <h3>QA Teams</h3>
-        <p>Receive clean, validated outputs with traceable changes for faster review cycles.</p>
-      </div>
-      <div class="kv">
-        <h3>Project Managers</h3>
-        <p>Reduce delivery bottlenecks, improve resource allocation, and enhance predictability.</p>
-      </div>
-      <div class="kv">
-        <h3>Vendors & Contractors</h3>
-        <p>Standardize outputs across multiple clients and projects for operational consistency.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" data-aos="fade-up">
-  <div class="container">
-    <h2 class="section-title">Validated Accuracy</h2>
-    <p class="lead">
-      Tested on 17 distinct BCU datasets, INTRACE consistently delivers high-accuracy results with deterministic execution and predictable scaling.
-    </p>
-    <div class="metrics__grid">
-      <div class="metric__card">
-        <div class="metric__stat">
-          <div class="metric__value">99.89%</div>
+      <div class="how__grid">
+        <div class="step">
+          <div class="step__head">
+            <div class="step__num">1</div>
+            <div class="step__title">Layout detection & tagging</div>
+          </div>
+          <div class="step__body">
+            Assign pages to vendor-specific layout IDs. Supports batch tagging and residue rules; caches for reuse.
+          </div>
         </div>
-        <div class="metric__desc">Strict accuracy</div>
-      </div>
-      <div class="metric__card">
-        <div class="metric__stat">
-          <div class="metric__value">100%</div>
+
+        <div class="step">
+          <div class="step__head">
+            <div class="step__num">2</div>
+            <div class="step__title">Preprocessing & OCR</div>
+          </div>
+          <div class="step__body">
+            Normalize contrast, crop regions, and OCR both numbers and descriptions with rule-based validation.
+          </div>
         </div>
-        <div class="metric__desc">Semantic accuracy</div>
+
+        <div class="step">
+          <div class="step__head">
+            <div class="step__num">3</div>
+            <div class="step__title">Grouping & validation</div>
+          </div>
+          <div class="step__body">
+            Deterministic grouping, partial-group handling, cross-page consistency, and anomaly flags.
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__head">
+            <div class="step__num">4</div>
+            <div class="step__title">Export for QA review</div>
+          </div>
+          <div class="step__body">
+            Excel/CSV with flags for anomalies and a changelog for audits; engineer signs off.
+          </div>
+        </div>
       </div>
-     
     </div>
-    <p class="muted" style="margin-top:12px;">Validated on standard hardware. CI (binomial): 99.71% – 99.96%.</p>
-  </div>
-</section>
+  </section>
 
-<!-- Place near the bottom before CTA, or right after the hero -->
-<section id="download" class="section" data-aos="fade-up">
-  <div class="container">
-    <h2 class="section-title">Download</h2>
-    <p class="lead">Get INTRACE for macOS and Windows.</p>
-    <div class="cta">
-      <a href="assets/intrace-macos.zip" class="button button--primary">Download for macOS</a>
-      <a href="assets/intrace-windows.zip" class="button button--ghost">Download for Windows</a>
+  <!-- CAPABILITIES -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Capabilities</h2>
+      <div class="kv__grid">
+        <div class="kv">
+          <h3>Vendor-agnostic</h3>
+          <p>Pluggable layout configs. Works across major vendors and custom schemas.</p>
+        </div>
+        <div class="kv">
+          <h3>Deterministic pipeline <span class="badge">No black box</span></h3>
+          <p>Rule-first engine with explicit validation, predictable and debuggable outputs.</p>
+        </div>
+        <div class="kv">
+          <h3>Human-in-the-loop</h3>
+          <p>Fast correction passes with audit trail; engineer always has final say.</p>
+        </div>
+        <div class="kv">
+          <h3>Reuse aware</h3>
+          <p>Caches calibration and assignments for repeat vendors and similar layouts.</p>
+        </div>
+        <div class="kv">
+          <h3>Deployment</h3>
+          <p>Single-machine, offline-capable; minimal dependencies.</p>
+        </div>
+        <div class="kv">
+          <h3>Exports</h3>
+          <p>Excel/CSV plus JSON sidecars for CI ingestion and downstream automation.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<section class="cta-section" data-aos="fade-up">
-  <div class="container">
-    <h2>Cut documentation time by 95% – 98%</h2>
-    <p class="lead">Deterministic pipeline. Human-in-the-loop review. Ready for your next project.</p>
-    <div class="cta" style="justify-content:center;">
-      <a href="#demo" class="button button--primary">Watch demo</a>
-      <a href="#how" class="button button--ghost">Download</a>
+  <!-- WHO IT’S FOR -->
+  <section id="who" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Who’s It For</h2>
+      <div class="kv__grid">
+        <div class="kv">
+          <h3>Design Engineers</h3>
+          <p>Accelerate documentation tasks and focus on system design, not repetitive data handling.</p>
+        </div>
+        <div class="kv">
+          <h3>QA Teams</h3>
+          <p>Receive clean, validated outputs with traceable changes for faster review cycles.</p>
+        </div>
+        <div class="kv">
+          <h3>Project Managers</h3>
+          <p>Reduce delivery bottlenecks, improve resource allocation, and enhance predictability.</p>
+        </div>
+        <div class="kv">
+          <h3>Vendors & Contractors</h3>
+          <p>Standardize outputs across multiple clients and projects for operational consistency.</p>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- VALIDATED ACCURACY -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Validated Accuracy</h2>
+      <p class="lead">
+        Tested across multiple projects and vendors. Typical per-run matching falls in the <strong>95–100%</strong> range; worst-case datasets around <strong>~90%</strong> before review.
+      </p>
+      <div class="metrics__grid">
+        <div class="metric__card">
+          <div class="metric__stat"><div class="metric__value">95 – 100%</div></div>
+          <div class="metric__desc">Typical matching (by item). Vendor and scan quality dependent.</div>
+        </div>
+       <div class="metric__card">
+  <div class="metric__stat">
+    <div class="metric__value">&lt;90%</div>
   </div>
-</section>
+  <div class="metric__desc">Items below this mean confidence are flagged</div>
+</div>
+      </div>
+      <p class="muted" style="margin-top:12px;">Full logs available for audit.</p>
+    </div>
+  </section>
+
+  <!-- DATA HANDLING & TELEMETRY -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Data handling & telemetry</h2>
+      <div class="kv__grid">
+        <div class="kv">
+          <h3>Local-only logs</h3>
+          <p>Logs stay on your machine. They include OCR diagnostics (confidence/PSM/“used user-words”) but never source images.</p>
+        </div>
+        <div class="kv">
+          <h3>Telemetry is OFF</h3>
+          <p>Disabled by default. If enabled, only aggregated counters are sent. Never raw text or images.</p>
+        </div>
+        <div class="kv">
+          <h3>Review workflow</h3>
+          <p>Low-confidence items are flagged for quick human review; changes are tracked in a changelog.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSUMPTIONS & LIMITS -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Assumptions & limits</h2>
+      <ul class="lead" style="margin-left:1rem;">
+        <li>Clear scans (≥300 DPI) materially improve OCR stability.</li>
+        <li>Previously unseen layouts require a short calibration pass.</li>
+        <li>Heavily compressed PDFs, handwritten edits, or overlapping annotations reduce match rates.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Download</h2>
+      <p class="lead">Get INTRACE for Windows.</p>
+      <div class="cta">
+        <a href="assets/intrace-windows.zip" class="button button--ghost">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section" data-aos="fade-up">
+    <div class="container">
+      <h2>Cut documentation time by 90% – 98%</h2>
+      <p class="lead">Deterministic pipeline. Human-in-the-loop review. Improves with every run.</p>
+      <div class="cta" style="justify-content:center;">
+        <a href="#download" class="button button--ghost">Download</a>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
-

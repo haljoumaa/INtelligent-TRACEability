@@ -34,19 +34,25 @@ html, body {
 }
 
 .header__inner {
-  height: 64px;
+  /* height: 64px;  <-- removed fixed height */
+  min-height: 64px;                /* preserves a compact bar */
+  padding: 6px 0;                  /* slight breathing room */
   display: flex;
   align-items: center;
   justify-content: space-between;  /* logo left, nav right */
   gap: 24px;
 }
 
+/* Bigger logo without inflating header height */
 .header__logo img {
-  height:54px;                    /* not huge */
+  height: clamp(54px, 10vw, 96px); /* scales up on large screens, caps at 96px */
   display: block;
   object-fit: contain;
+  margin-top: -4px;                /* visual overhang: keeps bar compact */
+  margin-bottom: -50px;             /* balanced overhang */
 }
 
+/* Keep nav vertically centered to logo’s midline */
 .header__nav {
   display: flex;
   align-items: center;
@@ -64,7 +70,7 @@ html, body {
 /* ---- Hero (left copy, right media) ---- */
 .hero {
   padding: 96px 0 40px;  
-   background: linear-gradient(180deg, rgba(0,123,255,0.05) 0%, white 100%);          /* generous top space like Framer */
+  background: linear-gradient(180deg, rgba(0,123,255,0.05) 0%, white 100%); /* generous top space like Framer */
 }
 
 .hero__inner {
@@ -137,6 +143,7 @@ html, body {
   width: 100%;
   height: auto;
 }
+
 /* --- Metrics v2: evidence cards --- */
 .metrics { background:#f9f9f9; padding:72px 0; }
 .metrics__grid {
@@ -322,8 +329,6 @@ a:focus-visible, button:focus-visible {
 
 .metrics { background: var(--accent-05); }
 
-/* .section { background: var(--accent-05); } */
-
 /* Smooth anchor scroll with sticky header offset */
 html { scroll-behavior: smooth; }
 :target { scroll-margin-top: 84px; } /* header height + spacing */
@@ -340,4 +345,20 @@ html { scroll-behavior: smooth; }
 #metrics h2::after {
   content:""; position:absolute; left:0; bottom:0; width:42%; height:3px;
   background:var(--accent); border-radius:2px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .header__inner {
+    flex-wrap: wrap; /* allows logo and menu to go onto different lines */
+  }
+  .header__logo img {
+    height: 54px;     /* keep it compact on small screens */
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .header__nav {
+    flex-wrap: wrap; /* menu links wrap instead of overflowing */
+    gap: 12px;
+  }
 }
