@@ -1,10 +1,9 @@
-/* ---- Tokens ---- */
 :root {
   --text: #111;
   --muted: #555;
   --line: #eee;
   --bg: #fff;
-  --accent: #007BFF; /* keep your brand blue */
+  --accent: #007BFF; 
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +15,7 @@ html, body {
   line-height: 1.6;
 }
 
-/* Wider container like Framer */
+
 .container {
   max-width: 1200px;               /* wider */
   margin: 0 auto;
@@ -34,7 +33,6 @@ html, body {
 }
 
 .header__inner {
-  /* height: 64px;  <-- removed fixed height */
   min-height: 64px;                /* preserves a compact bar */
   padding: 6px 0;                  /* slight breathing room */
   display: flex;
@@ -70,7 +68,7 @@ html, body {
 /* ---- Hero (left copy, right media) ---- */
 .hero {
   padding: 96px 0 40px;  
-  background: linear-gradient(180deg, rgba(0,123,255,0.05) 0%, white 100%); /* generous top space like Framer */
+  background: linear-gradient(180deg, rgba(0,123,255,0.05) 0%, white 100%); 
 }
 
 .hero__inner {
@@ -87,7 +85,7 @@ html, body {
   letter-spacing: -0.02em;
   margin-bottom: 16px;
   color: var(--text);
-  text-align: left;                /* left aligned like Framer */
+  text-align: left;             
 }
 
 .lead {
@@ -206,7 +204,7 @@ html, body {
 
 /* ==== Accent usage upgrades ==== */
 :root {
-  --accent: #007BFF;        /* your blue (unchanged) */
+  --accent: #007BFF;        
   --accent-05: rgba(0,123,255,0.05);
   --accent-12: rgba(0,123,255,0.12);
   --accent-20: rgba(0,123,255,0.20);
@@ -236,10 +234,10 @@ html, body {
 /* 3) Metric emphasis in blue */
 .metric__value { color: var(--accent); }
 
-/* Optional: tighter metric card look */
+/* tighter metric card look */
 .metric__card { border-color: var(--accent-12); box-shadow: 0 6px 22px rgba(0,0,0,0.04); }
 
-/* 4) Step numbers: filled blue chips */
+
 .step__num {
   background: var(--accent);
   color: #fff;
@@ -247,7 +245,7 @@ html, body {
   box-shadow: 0 1px 0 var(--accent-20) inset;
 }
 
-/* 5) Blue dividers for section rhythm */
+
 .section-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, var(--accent-20) 12%, var(--accent-20) 88%, transparent 100%);
@@ -255,13 +253,13 @@ html, body {
   border: 0;
 }
 
-/* 6) Hero media: blue-tinted frame */
+
 .hero__media {
   border: 1px solid var(--accent-12);
   box-shadow: 0 8px 28px rgba(0,0,0,0.07);
 }
 
-/* 7) CTA section (blue block at the end) */
+
 .cta-section {
   background: var(--accent);
   color: #fff;
@@ -283,7 +281,7 @@ html, body {
 }
 .cta-section .button--ghost:hover { background: rgba(255,255,255,0.12); }
 
-/* 8) Blue focus for accessibility */
+
 a:focus-visible, button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
@@ -291,7 +289,7 @@ a:focus-visible, button:focus-visible {
 }
 .hero__media .tint { filter: saturate(1.05) hue-rotate(0deg); }
 
-/* === Section heading normalizer (safe, no HTML refactor) === */
+
 
 /* Same typography for all section H2s */
 .metrics h2,
@@ -324,20 +322,19 @@ a:focus-visible, button:focus-visible {
   border-radius: 2px;
 }
 
-/* Make sure Metrics has consistent section spacing like others */
+
 .metrics, .how, .section { padding: 72px 0; }
 
 .metrics { background: var(--accent-05); }
 
-/* Smooth anchor scroll with sticky header offset */
+
 html { scroll-behavior: smooth; }
 :target { scroll-margin-top: 84px; } /* header height + spacing */
 
-/* Optional: nav active state */
+
 .header__nav a.active { color: var(--accent); }
 
-/* Keep “Performance” h2 consistent (if you don’t use .section-title everywhere) */
-#metrics h2 { /* matches your normalizer */
+#metrics h2 { 
   display:inline-block; font-size:clamp(24px,3vw,36px);
   line-height:1.2; font-weight:800; letter-spacing:-0.01em;
   color:var(--text); margin-bottom:16px; position:relative; padding-bottom:6px;
@@ -347,18 +344,18 @@ html { scroll-behavior: smooth; }
   background:var(--accent); border-radius:2px;
 }
 
-/* Responsive tweaks */
+
 @media (max-width: 768px) {
   .header__inner {
     flex-wrap: wrap; /* allows logo and menu to go onto different lines */
   }
   .header__logo img {
-    height: 54px;     /* keep it compact on small screens */
+    height: 54px;     
     margin-top: 0;
     margin-bottom: 0;
   }
   .header__nav {
-    flex-wrap: wrap; /* menu links wrap instead of overflowing */
+    flex-wrap: wrap; 
     gap: 12px;
   }
 }
