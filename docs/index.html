@@ -20,10 +20,10 @@
   <!-- TOP NAVIGATION -->
   <header class="site-header" data-aos="fade-down">
     <div class="container header__inner">
-      <a href="#" class="header__logo">
+      <a href="#" class="header__logo" aria-label="INTRACE home">
         <img src="assets/intrace.svg" alt="INTRACE logo" />
       </a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="Primary">
         <a href="#download">Download</a>
         <a href="#metrics">Performance</a>
         <a href="#how">How It Works</a>
@@ -37,7 +37,7 @@
     <div class="container hero__inner">
       <!-- Left: copy -->
       <div>
-        <h1>Trace Less. Type Less.</h1>
+        <h1>Trace less. Type less.</h1>
         <p class="lead">
           INTRACE automates the repetitive parts of substation documentation. Calibration and final QA remain human.
           First-time projects typically complete in <strong>30–90 minutes</strong> depending on layout variability and scan quality.
@@ -63,7 +63,7 @@
   <!-- WHAT IT DOES — AND DOESN’T -->
   <section class="section" data-aos="fade-up">
     <div class="container">
-      <h2 class="section-title">What it does - and doesn’t</h2>
+      <h2 class="section-title">What it does — and doesn’t</h2>
       <div class="kv__grid">
         <div class="kv">
           <h3>Does</h3>
@@ -112,7 +112,7 @@
       <div class="metrics__grid">
         <div class="metric__card">
           <div class="metric__stat">
-            <div class="metric__value">30 – 90</div><div class="metric__unit">min</div>
+            <div class="metric__value">30–90</div><div class="metric__unit">min</div>
           </div>
           <div class="metric__desc">First-time projects (layout variability & scan quality drive range).</div>
           <div class="metric__foot">Measured on standard hardware; single-machine runs.</div>
@@ -120,7 +120,7 @@
 
         <div class="metric__card">
           <div class="metric__stat">
-            <div class="metric__value">10 – 30</div><div class="metric__unit">min</div>
+            <div class="metric__value">10–30</div><div class="metric__unit">min</div>
           </div>
           <div class="metric__desc">With reuse (same/similar vendor layouts).</div>
           <div class="metric__foot">Cached calibration & assignments; layout reuse enabled.</div>
@@ -128,7 +128,7 @@
 
         <div class="metric__card">
           <div class="metric__stat">
-            <div class="metric__value">90 – 98%</div>
+            <div class="metric__value">90–98%</div>
           </div>
           <div class="metric__desc">Time reduction vs. manual spreadsheet workflows.</div>
           <div class="metric__foot">Range reflects OCR quality and layout variance.</div>
@@ -153,7 +153,7 @@
     <div class="container">
       <h2 class="section-title">Compounding gains</h2>
       <p class="lead">
-        Each run expands your layout library. As it grows, new projects increasingly match existing layouts. Cutting calibration and runtime.
+        Each run expands your layout library. As it grows, new projects increasingly match existing layouts, cutting calibration and runtime.
       </p>
       <div class="kv__grid">
         <div class="kv">
@@ -284,15 +284,15 @@
       </p>
       <div class="metrics__grid">
         <div class="metric__card">
-          <div class="metric__stat"><div class="metric__value">95 – 100%</div></div>
+          <div class="metric__stat"><div class="metric__value">95–100%</div></div>
           <div class="metric__desc">Typical matching (by item). Vendor and scan quality dependent.</div>
         </div>
-       <div class="metric__card">
-  <div class="metric__stat">
-    <div class="metric__value">&lt;90%</div>
-  </div>
-  <div class="metric__desc">Items below this mean confidence are flagged</div>
-</div>
+        <div class="metric__card">
+          <div class="metric__stat">
+            <div class="metric__value">&lt;90%</div>
+          </div>
+          <div class="metric__desc">Items below this mean confidence are flagged</div>
+        </div>
       </div>
       <p class="muted" style="margin-top:12px;">Full logs available for audit.</p>
     </div>
@@ -332,15 +332,21 @@
   </section>
 
   <!-- DOWNLOAD -->
-  <section id="download" class="section" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Download</h2>
-      <p class="lead">Get INTRACE for Windows.</p>
-      <div class="cta">
-        <a href="assets/intrace-windows.zip" class="button button--ghost">Download</a>
-      </div>
+   <!-- DOWNLOAD -->
+<section id="download" class="section" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Download</h2>
+    <p class="lead">Get INTRACE for Windows.</p>
+    <div class="cta">
+      <a href="https://github.com/haljoumaa/INtelligent-TRACEability/releases/download/v1.0.0/INTRACE.exe"
+         class="button button--ghost"
+         download>
+        Download INTRACE (.exe)
+      </a>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- FINAL CTA -->
   <section class="cta-section" data-aos="fade-up">
