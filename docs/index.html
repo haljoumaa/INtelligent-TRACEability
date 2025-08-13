@@ -28,6 +28,7 @@
         <a href="#metrics">Performance</a>
         <a href="#how">How It Works</a>
         <a href="#who">Who’s It For</a>
+        <a href="#feedback">Feedback</a>
       </nav>
     </div>
   </header>
@@ -353,6 +354,58 @@
   </div>
 </section>
 
+  <!-- FEEDBACK -->
+  <section id="feedback" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Feedback</h2>
+      <p class="lead">Help us become better.</p>
+
+      <form id="feedback-form" class="feedback__form" novalidate>
+        <div class="kv__grid">
+          <div class="kv">
+            <h3>Your role</h3>
+            <input id="role" name="role" type="text" placeholder="e.g., Protection Engineer, QA, PM" required aria-label="Your role" />
+          </div>
+
+          <div class="kv">
+            <h3>Experience level</h3>
+            <div class="rating" role="radiogroup" aria-label="Experience level">
+              <label><input type="radio" name="experience" value="Student" required> Student</label>
+              <label><input type="radio" name="experience" value="Junior"> Junior</label>
+              <label><input type="radio" name="experience" value="Senior"> Senior</label>
+              <label><input type="radio" name="experience" value="Lead"> Lead</label>
+            </div>
+          </div>
+
+          <div class="kv">
+            <h3>What worked? What didn’t?</h3>
+            <textarea id="comments" name="comments" rows="6" maxlength="2000"
+              placeholder="Be precise: vendor/layout, step, expected vs actual, error text if any…"
+              style="width:100%; resize:vertical; max-height:240px; overflow:auto;"></textarea>
+          </div>
+
+          <div class="kv">
+            <h3>Contact (optional)</h3>
+            <input id="email" name="email" type="email" placeholder="Work email (optional)" autocomplete="email" />
+            <label class="muted" style="display:block; margin-top:8px;">
+              <input id="consent" name="consent" type="checkbox" required>
+              I consent to you storing this submission for the purpose of product support.
+            </label>
+          </div>
+        </div>
+
+        <div class="cta" style="gap:8px;">
+          <button type="button" id="feedback-mailto" class="button" aria-label="Send via email">Send via email</button>
+        </div>
+        <p id="feedback-status" class="muted" role="status" aria-live="polite" style="margin-top:8px;"></p>
+      </form>
+
+      <details style="margin-top:12px;">
+        <summary>Privacy</summary>
+        <p class="muted">This form opens your email client with a pre-filled message. No data is sent automatically, and no files are uploaded.</p>
+      </details>
+    </div>
+  </section>
 
   <!-- FINAL CTA -->
   <section class="cta-section" data-aos="fade-up">
@@ -364,5 +417,52 @@
     </div>
   </section>
 
-</body>
-</html>
+  <script>
+    // ---- Feedback (mailto-only) ----
+    (function () {
+      const form = document.getElementById('feedback-form');
+      const status = document.getElementById('feedback-status');
+      const mailtoBtn = document.getElementById('feedback-mailto');
+
+      function emailOK(value) {
+        if (!value) return true; // optional
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+      }
+
+      mailtoBtn.addEventListener('click', () => {
+        status.textContent = '';
+
+        // Native constraint validation for required fields
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        if (!emailOK(form.email.value)) {
+          status.textContent = 'Invalid email format.';
+          return;
+        }
+
+        const role = (form.role.value || '').trim();
+        const exp = (new FormData(form).get('experience') || '').trim();
+        const comments = (form.comments.value || '').trim();
+        const email = (form.email.value || '').trim();
+        const consent = form.consent.checked ? 'yes' : 'no';
+        const ua = navigator.userAgent;
+        const ts = new Date().toISOString();
+
+        const subject = encodeURIComponent('INTRACE feedback');
+        const body = encodeURIComponent([
+          `Role: ${role}`,
+          `Experience: ${exp}`,
+          `Comments: ${comments}`,
+          `Email: ${email}`,
+          `Consent: ${consent}`,
+          `UA: ${ua}`,
+          `At: ${ts}`
+        ].join('\n'));
+
+        // Replace with your support email
+        window.location.href = `mailto:harethaljoumaa04@gmail.com?subject=${subject}&body=${body}`;
+      });
+    })();
+  </script>
