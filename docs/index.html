@@ -40,10 +40,11 @@
       <div>
         <h1>Trace less. Type less.</h1>
         <p class="lead">
-          INTRACE automates the repetitive parts of substation documentation. Calibration and final QA remain human.
-          First-time projects typically complete in <strong>30–90 minutes</strong> depending on layout variability and scan quality.
-          Reuse is faster.
-        </p>
+  INTRACE automates Digital Input (DI) extraction from BCU/LCC schematics. Calibration and final QA remain human.
+  First-time projects typically complete in <strong>30–90 minutes</strong> depending on layout variability and scan quality.
+  Reuse is faster.
+</p>
+
         <div class="cta">
           <a href="#download" class="button button--ghost">Download</a>
         </div>
@@ -142,6 +143,7 @@
           <div class="metric__desc">Engineering capacity freed per active project.</div>
           <div class="metric__foot">Conservative estimate assuming 1–2 projects/month.</div>
         </div>
+        
       </div>
       <p class="muted" style="margin-top:12px;">
         Accuracy and match rates use a conservative binomial confidence interval.
@@ -291,12 +293,21 @@
           <div class="metric__stat"><div class="metric__value">95 - 100%</div></div>
           <div class="metric__desc">Typical matching (by item). Vendor and scan quality dependent.</div>
         </div>
+        
         <div class="metric__card">
           <div class="metric__stat">
             <div class="metric__value">&lt;90%</div>
           </div>
           <div class="metric__desc">Items below this mean confidence are flagged</div>
         </div>
+        <div class="metric__card">
+  <div class="metric__stat">
+    <div class="metric__value">5,720</div><div class="metric__unit">DIs</div>
+  </div>
+  <div class="metric__desc">Processed in ~2 hours (incl. onboarding) with &gt;98% accuracy.</div>
+  <div class="metric__foot">Internal rollout example, Alfanar SAS, Aug 2025.</div>
+</div>
+
       </div>
       <p class="muted" style="margin-top:12px;">JSON and txt log available for audit.</p>
     </div>
@@ -310,10 +321,6 @@
         <div class="kv">
           <h3>Local-only logs</h3>
           <p>Logs stay on your machine. They include OCR diagnostics (engine/PSM, line/word confidence, whitelist “user‑words” hits) and application events (threading/pipeline stages).</p>
-        </div>
-        <div class="kv">
-          <h3>Telemetry is OFF</h3>
-          <p>Disabled by default. If enabled, only aggregated counters are sent. Never raw text or images.</p>
         </div>
         <div class="kv">
           <h3>Review workflow</h3>
@@ -347,12 +354,18 @@
          download>
         Download INTRACE
       </a>
+      <a href="https://github.com/haljoumaa/intrace/blob/main/USAGE.md"
+         class="button button--ghost">
+        View Usage Guide
+      </a>
     </div>
     <p class="muted" style="margin-top:12px; max-width:600px;">
-      Note: This executable is not digitally certified. Private domains may block installation entirely, and public networks may display a security warning before allowing it to run.
+      Note: This executable is not digitally certified. Private domains may block installation entirely, 
+      and public networks may display a security warning before allowing it to run.
     </p>
   </div>
 </section>
+
 
   <!-- FEEDBACK -->
   <section id="feedback" class="section" data-aos="fade-up">
@@ -406,6 +419,13 @@
       </details>
     </div>
   </section>
+<footer class="section" style="padding:20px 0; text-align:center;">
+  <p class="muted" style="max-width:800px; margin:0 auto; font-size:0.9rem;">
+    Disclaimer: INTRACE was developed independently by the author during an internship at Alfanar. 
+    Alfanar had no role in the design, development, or release of this software. 
+    References to Alfanar are limited to reporting results from internal pilot tests only.
+  </p>
+</footer>
 
   <!-- FINAL CTA -->
   <section class="cta-section" data-aos="fade-up">
@@ -462,7 +482,7 @@
         ].join('\n'));
 
         // Replace with your support email
-        window.location.href = `mailto:harethaljoumaa04@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:harethaljoumaa@gmail.com?subject=${subject}&body=${body}`;
       });
     })();
   </script>
